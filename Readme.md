@@ -1,0 +1,1 @@
+Este repositório tem a função de reunir todas as informações que consegui absorver ao longo de minha jornada de aprendizado em JavaScript
