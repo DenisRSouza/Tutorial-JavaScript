@@ -59,7 +59,7 @@ const preco2 =6;
 let total = preco1 + preco2;
 ```
 
-Essas duas variáveis, <code>preco1</code> e <code>preco 2</code> são declaradas com <code>const</code>, esse são valores constantes e não podem ser alterados. 
+Essas duas variáveis, <code>preco1</code> e <code>preco2</code> são declaradas com <code>const</code>, esse são valores constantes e não podem ser alterados. 
 
 A variável <code>total</code> é declarada com <code>let</code> e seu valor pode ser alterado
 
@@ -133,7 +133,7 @@ if (!isNaN(numero)) // se variável numero for não Not a Number
 Você frequentemente não terá um código que executa apenas quando uma condição for verdadeira, mas também que lida com outros casos. A palavra-chave <code>else</code> pode ser usada, juntamente com <code>if</code>, para criar dois caminhos distintos de execução:
 
 ```js
-var numero = Numbee(prompt("Escolha um número:", ""));
+var numero = Number(prompt("Escolha um número:", ""));
 if (!Nan(numero))
     alert("Este número elevado ao quadrado é igual a:" + numero * numero);
 else
