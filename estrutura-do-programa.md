@@ -134,8 +134,73 @@ Você frequentemente não terá um código que executa apenas quando uma condiç
 
 ```js
 var numero = Number(prompt("Escolha um número:", ""));
-if (!Nan(numero))
+if (!isNan(numero))
     alert("Este número elevado ao quadrado é igual a:" + numero * numero);
 else
-    alert("Isto não é um número")
+    alert("Isto não é um número");
 ```
+
+Se tivermos mais do que dois caminhos a escolher, ou seja, quando temos mais coisas para validar/checar, então temos 2 ou mais condições. Neste caso, os pares <code>if</code>/<code>else</code> podem ser "encadeados". Aqui temos um exemplo:
+
+```js
+if (A>B){
+    console.log("Verdade, A é maior que B")
+}
+else if (A>C){
+    console.log("Verdade, A é maior que C")
+}
+else{
+    console.log("Falso, A é menor que B e C")
+}
+```
+
+Se for pensar em português, a sequência seria algo assim:
+- Se (<code>if</code>) A é maior que B?
+- Se for verdade (<code>true</code>), mostre a frase --> Verdade, A é maior que B
+- Se for falso (<code>false</code>) --> cheque uma nova condição (<code>else if</code>)
+- A é maior que C?
+- Se for verdade (<code>true)</code>, mostre a frase --> Verdade, A é maior que C
+- Senão (<code>false</code>), mostre a frase --> Falso, A é menor que B e C
+
+<em>LOOPS <code>While</code> E <code>Do</code></em>
+
+Considere um programa que imprime todos os números pares de 0 a 12. Uma forma de escrever isso é repetindo o comando <code>console.log</code> 12 vezes. Isso funciona, mas a ideia de escrever um programa é fazer com que algo seja menos trabalhoso, e não o contrário. O que precisamos é de uma maneira de repetir o código. Essa forma de fluxo de controle é chamada de laço de repetição (loop).
+
+Se combinarmos o laço de repetição a uma variável contadora, conseguiremos fazer algo assim:
+
+```js
+var number = 0; //0
+while (number <=12>){
+    console.log(number);
+    number = number +2; //2 ...12
+}
+```
+
+Nesse loop, queremos imprimir o número atual e somar dois em nossa variável. Sempre que precisarmos executar múltiplas declarações dentro de um loop, nós as envolvemos com chaves( <code>{ }</code> ). As chaves, para as declarações, são similares aos parênteses para as expressões. Uma sequência de declarações encolvidas por chaves é chamada de bloco.
+
+Como um exemplo, podemos escrever um programa que calcula e mostra o valor de 2 elevado à décima potência:
+
+```js
+var potencia = 1;
+var numero = 0;
+while (potencia <= 10) {
+  numero = 2 ** potencia;
+  console.log(numero);
+  potencia = potencia + 1;
+}
+```
+
+O loop <code>do</code> é uma estrutura de controle similar ao <code>while</code>. A única diferença entre eles é que o <code>do</code> sempre executa suas declarações ao menos uma vez e inicia o teste para verificar se deve parar ou não apenas após a primeira execução:
+
+```js
+do{
+    var name = prompt("Quem é você?");
+}
+while (!name);
+console.log;
+```
+
+Esse programa irá forçar você a informar um nome. Ele continuará pedindo até que seja fornecido um valor que não seja uma string vazia. Aplicar o operador <code>!</code> faz com que o valor seja convertido para o tipo Booleano antes de negá-lo, e todas as strings exceto <code>""</code> convertem para <code>true</code>.
+
+<em> LOOPS <code>for</code></em>
+
